@@ -43,18 +43,16 @@ e=0
 st='text'
 #print (st, type(st))
 
+#--giving the ability to print Definition Translation synonms ..etc behind each word
 print('Τι θέλετε να τυπωθεί πίσω από τις λέξεις, για Definition πατήστε 1, για Translation πατήστε 2, για Synonyms 3, για Derivatives 4 και για Example 5')
 x = input()
 x = int(x)
 
+#--wrong case 
 while x<0 or x>5:
         print('Λαθός πληκτρολόγηση :(')
         print('Τι θέλετε να τυπωθεί πίσω από τις λέξεις, για Definition πατήστε 1, για Translation πατήστε 2, για Synonyms 3, για Derivatives 4 και για Example 5')
-        x = input()
-
-        
-        
-        
+        x = input()   
         
 
 while e<(a*12):
@@ -74,7 +72,7 @@ while e<(a*12):
         cell0.text = w 
         cell1 = table1.cell(rows+6, 1)
         cell1.text = d
-        e +=1
+        e += 1
             
     for j in range (6, 12, 1):
         rows = c+j
@@ -91,17 +89,10 @@ while e<(a*12):
         cell1 = table1.cell(rows, 0)
         cell1.text = d       
         e +=1
-        print('=== :D ===')
-        
-    
+        print('=== :D ===')   
     c +=12
-       
-
-
-
 r=0
 for l in range(0, peris, 1):
-        
         rows = c + l    
         w = sheet.cell(rows, 0)
         w = str (w)
@@ -114,10 +105,5 @@ for l in range(0, peris, 1):
         cell0.text = w
         cell1 = table1.cell(rows+6, 1)
         cell1.text = d
-        
-
-
-
-    
-        
+             
 document.save('Cards01.docx')
